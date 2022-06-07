@@ -1,6 +1,10 @@
 # face_warp
 一个简单的换脸程序
 
+环境:py37 + dlib + opencv + scipy
+
+下载dlib人脸形状检测器模型数据：shape_predictor_68_face_landmarks.dat.bz2，并解压在models文件夹下
+
 通过dlib识别人脸68个特征点
 
 通过delaunay三角剖分得到三角面片
