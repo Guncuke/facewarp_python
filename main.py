@@ -187,7 +187,7 @@ if __name__ == '__main__':
 
     # 计算源图像变换后的图片
     ans = affine_transform(source, source_feature_points, target, target_feature_points)
-    cv_show('ans',ans)
+
     # 泊松融合
     seamless_im = cv2.seamlessClone(ans, target, mask=target_face_mask, p=target_face_center_point, flags=cv2.NORMAL_CLONE)
     cv_show('target', seamless_im)
