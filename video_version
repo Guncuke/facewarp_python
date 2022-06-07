@@ -179,7 +179,7 @@ if __name__ == '__main__':
 
     cam = cv2.VideoCapture('video/soar_2.mp4')
     videooutpath = 'video/soar_out.mp4'
-    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    fourcc = cv2.VideoWriter_fourcc(*'MP4V')
     writer = cv2.VideoWriter(videooutpath, fourcc, 20.0, (1920, 1080), True)
     count = 1
     if cam.isOpened():
