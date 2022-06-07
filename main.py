@@ -51,7 +51,7 @@ def get_mask_center_point(image_mask):
     image_mask_index = np.argwhere(image_mask > 0)
     min = np.min(image_mask_index, axis=0)
     max = np.max(image_mask_index, axis=0)
-    center_point = ((max[0] + min[0]) // 2, (max[1] + min[1]) // 2)
+    center_point = ((max[1] + min[1]) // 2, (max[0] + min[0]) // 2)
     return center_point
 
 def affine_transform(source, source_feature_points, target, target_feature_points):
