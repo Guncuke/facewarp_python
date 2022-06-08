@@ -5,6 +5,9 @@
 
 下载dlib人脸形状检测器模型数据：shape_predictor_68_face_landmarks.dat.bz2，并解压在models文件夹下
 
+http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+
+
 通过dlib识别人脸68个特征点
 
 通过delaunay三角剖分得到三角面片
