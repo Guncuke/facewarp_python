@@ -17,5 +17,4 @@ http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 采用逆向变换的方式
 
 源图像和目标图像背景融合采用泊松融合
-
-![target_screenshot_07 06 2022](https://user-images.githubusercontent.com/78009909/172281458-6a5565b2-bd8f-4b72-b8c8-67dbc03cd984.png)
+![image](https://user-images.githubusercontent.com/78009909/172516247-637696cc-2bd8-40b6-8d52-2f36e98486ba.png)
