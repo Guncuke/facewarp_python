@@ -3,9 +3,11 @@ import cv2
 import dlib
 import numpy as np
 from scipy.spatial import Delaunay,tsearch
+# from matplotlib import pyplot as plt
 
 # 展示图片
 def cv_show(name, img):
+    cv2.namedWindow(name, cv2.WINDOW_NORMAL)
     cv2.imshow(name, img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
@@ -165,8 +167,8 @@ if __name__ == '__main__':
     detector = dlib.get_frontal_face_detector()  # dlib的正向人脸检测器
     predictor = dlib.shape_predictor(predictor_path)  # dlib的人脸形状检测器
 
-    source = cv2.imread('faces/source.jpg')
-    target = cv2.imread('faces/target.jpg')
+    source = cv2.imread('faces/source1.jpg')
+    target = cv2.imread('faces/target1.jpg')
 
     # 获得人脸68个特征点
     source_feature_points = get_face_landmarks(source, detector, predictor)
@@ -187,14 +189,6 @@ if __name__ == '__main__':
 
     # 计算源图像变换后的图片
     ans = affine_transform(source, source_feature_points, target, target_feature_points)
-
     # 泊松融合
     seamless_im = cv2.seamlessClone(ans, target, mask=target_face_mask, p=target_face_center_point, flags=cv2.NORMAL_CLONE)
     cv_show('target', seamless_im)
-
-
-
-
-
-
-
