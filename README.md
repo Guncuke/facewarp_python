@@ -1,5 +1,4 @@
-# face_warp
-一个简单的换脸程序
+# 一个简单的换脸程序
 
 环境:py37 + dlib + opencv + scipy
 
